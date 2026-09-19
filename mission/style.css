@@ -5,7 +5,7 @@ body {
     color: black;
 }
 
-#content {
+.mission-content {
     max-width: 475px;
     margin: 50px auto;
     padding: 0 70px 70px;
