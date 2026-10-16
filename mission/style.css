@@ -48,3 +48,8 @@ img {
     height: auto;
     margin: 40px auto 20px;
 }
+
+.dark-mode {
+    background-color: #1a1a1a;
+    color: #f0f0f0;
+}
