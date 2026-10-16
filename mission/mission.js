@@ -12,4 +12,4 @@ function changeTheme() {
         pageContent.classList.remove('dark-mode');
         logoImg.src = "images/byui-logo-blue.jpg";
     }
-}
+}           
