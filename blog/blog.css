@@ -1,0 +1,144 @@
+
+header {
+    display: grid;
+    justify-items: center;
+    border-bottom: 3px solid #d8d801;
+}
+
+footer {
+    display: grid;
+    justify-items: center;
+    border-top: 3px solid #d8d801;
+}
+
+
+header nav{
+    justify-self: stretch;
+    display: grid;
+    justify-content: right; 
+    border-top: 3px solid #d8d801;
+    align-items: center;
+    height: 40px;
+}
+
+.main-nav {
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: right;
+    list-style: none;
+    gap: 30px;
+    margin: 0;
+    padding: 0 10px;
+    font-style: italic;
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: #920000cc;
+}
+
+section.book-details {
+    display: grid;
+    padding-right: 20px;
+    margin-top: 40px;
+    border-top: 3px solid #d8d801;
+}
+
+h1 {
+    color: #920000cc;
+}
+
+body {
+    margin: 0;
+}
+
+.book-date {
+    font-style: italic;
+}
+
+@media (min-width: 600px) {
+
+    main {
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+        justify-items: start;
+        padding: 20px 40px;
+    }
+
+    section.book-details {
+        justify-self: stretch;
+        align-content: start;
+        grid-column: 1;
+        grid-row: 1 / 4;
+        text-align: right;
+        margin: 20px;
+        padding-right: 20px;
+        border-top: none;
+        border-right: 3px solid #d8d801;
+    }
+
+    main h1 {
+        margin-top: 0;
+    }
+
+    .book-details p {
+        margin: 10px 0;
+    }
+
+    main h1, main img, .book-review {
+        grid-column: 2;
+        margin-left: 20px;
+
+    }
+
+    main img {
+        width: 200px;
+        height: auto;
+        justify-content: center;
+        margin-left: 200px;
+    }
+
+    .book-review {
+        max-width: 400px;
+    }
+
+}
+
+@media (max-width: 599px) {
+
+    h1 {
+        font-size: 1.5em;
+        text-align: center;
+    }
+
+    main img {
+        width: 40%;
+        height: auto;
+    }
+
+    main {
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+        justify-items: center;
+        padding: 0 10px;
+    }
+
+    main > * {
+        grid-column: 1;
+    }
+
+    .book-review {
+        text-align: left;
+        max-width: 80%;
+    }
+
+    .book-details {
+        grid-column: 1 / -1;
+        text-align: right;
+        justify-self: stretch;
+        margin-left: -10px;
+        margin-right: -10px;
+        border-top: 2px solid #d8d801;
+    }
+}
+
