@@ -52,12 +52,12 @@ const movies = [
             <img src=${movie.imgSrc} alt=${movie.imgAlt}>
             <p><strong>Release Date:</strong> ${movie.date}</p>
             <p><strong>Recommended Age:</strong> ${movie.ages}</p>
-            <p><strong>Genre:</strong> ${move.genre}</p>
+            <p><strong>Genre:</strong> ${movie.genre}</p>
             <p><strong>Rating:</strong> <span aria-label="${movie.stars.length}" role="img">${movie.stars}</span></p>
-            <p id='desc'>${move.description}</p>
+            <p id='desc'>${movie.description}</p>
         `
 
-    article.innerHTML += html;
+    article.innerHTML = html;
     movieList.appendChild(article);
 
     });
