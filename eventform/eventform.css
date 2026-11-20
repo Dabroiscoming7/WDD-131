@@ -1,0 +1,170 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background: #bdc9d8;
+    color: #111;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+main {
+    width: min(1040px, calc(100% - 40px));
+    margin: 60px auto;
+}
+
+form,
+.event-box,
+#ticket {
+    background: #fff;
+    border-radius: 16px;
+}
+
+form {
+    padding: 34px 48px 0;
+}
+
+.event-box {
+    padding-bottom: 40px;
+}
+
+h1 {
+    margin: 4px 0 28px;
+    font-size: 48px;
+    line-height: 1;
+}
+
+h2 {
+    margin: 0 0 18px;
+}
+
+.name-row,
+.details-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+}
+
+.form-field {
+    display: grid;
+    gap: 8px;
+    margin-bottom: 22px;
+}
+
+label {
+    font-size: 24px;
+}
+
+input,
+select {
+    width: 100%;
+    height: 64px;
+    border: 1.5px solid #777;
+    border-radius: 4px;
+    background: #fff;
+    padding: 10px 14px;
+    font-size: 22px;
+}
+
+input:focus,
+select:focus {
+    border-color: #2a75ca;
+    outline: 3px solid #2a75ca;
+    outline-offset: -3px;
+}
+
+button {
+    width: 100%;
+    height: 54px;
+    border: 2px solid #111;
+    border-radius: 0;
+    background: #b9d2e9;
+    color: #111;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #a9c6df;
+}
+
+#participant-info {
+    padding: 0;
+    margin: 0 0 22px;
+}
+
+#participant-info input {
+    border: 2px solid #777;
+}
+
+#participant-info[hidden],
+#ticket[hidden] {
+    display: none;
+}
+
+#form-errors {
+    margin-top: 18px;
+}
+
+#form-errors:not(:empty) {
+    color: #111;
+    padding: 4px 0;
+}
+
+#form-errors ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 22px;
+}
+
+#ticket {
+    margin: 24px 48px 0;
+}
+
+#ticket h2 {
+    font-size: 34px;
+}
+
+#ticket p {
+    margin: 18px 0;
+    font-size: 22px;
+}
+
+@media (max-width: 700px) {
+    main {
+        width: calc(100% - 24px);
+        margin: 24px auto;
+    }
+
+    form,
+    #ticket {
+        padding: 24px;
+    }
+
+    #ticket {
+        margin: 24px 24px 0;
+    }
+
+    h1 {
+        font-size: 38px;
+    }
+
+    .name-row,
+    .details-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    label {
+        font-size: 20px;
+    }
+
+    input,
+    select {
+        height: 58px;
+        font-size: 18px;
+    }
+}
